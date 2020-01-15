@@ -1,0 +1,79 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class Main {
+    static int mod=(int)1e9+7;
+    public static void main(String[] args) throws Exception {
+        FastReader sc = new FastReader();
+        String s=sc.nextLine();
+        char[] arr=sc.nextLine().toCharArray();
+        int k=sc.nextInt();
+        TrieNode root=new TrieNode();
+        int ans=0;
+        TrieNode current;
+        for(int i=0;i<s.length();i++){
+            current=root;
+            int count=0;
+            for(int j=i;j<s.length();j++){
+                if(arr[s.charAt(j)-'a']=='0')count++;
+                if(count>k)break;
+                if(current.next[s.charAt(j)-'a']==null){
+                    current.next[s.charAt(j)-'a']=new TrieNode();
+                    ans++;
+                }
+                current=current.next[s.charAt(j)-'a'];
+            }
+        }
+        System.out.println(ans);
+    }
+}
+class TrieNode{
+    TrieNode[] next;
+    TrieNode(){
+        next=new TrieNode[26];
+    }
+}
+
+class FastReader {
+    BufferedReader br;
+    StringTokenizer st;
+
+    public FastReader() {
+        br = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    String next() {
+        while (st == null || !st.hasMoreElements()) {
+            try {
+                st = new StringTokenizer(br.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return st.nextToken();
+    }
+
+    int nextInt() {
+        return Integer.parseInt(next());
+    }
+
+    long nextLong() {
+        return Long.parseLong(next());
+    }
+
+    double nextDouble() {
+        return Double.parseDouble(next());
+    }
+
+    String nextLine() {
+        String str = "";
+        try {
+            str = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
+}
