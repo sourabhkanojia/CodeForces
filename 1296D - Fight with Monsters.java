@@ -12,7 +12,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt(),a=sc.nextInt(),b=sc.nextInt(),k=sc.nextInt();
-        StringBuilder sb=new StringBuilder();
         int hp[]=new int[n];
         for (int i=0;i<n;i++)hp[i]=sc.nextInt();
         int arr[]=new int[n];
@@ -35,7 +34,6 @@ public class Main {
             k=k-arr[i];
             ans++;
         }
-        sb.append(ans);
-        System.out.println(sb);
+        System.out.println(ans);
     }
 }
