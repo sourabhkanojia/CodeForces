@@ -32,8 +32,6 @@ public class Main {
             double w_mice=cal(w-1,b)*(double)w/(w+b);
             res+=cp*(b_mice+w_mice);
         }
-        b++;
-        b++;
-        return dp[w][b]=res;
+        return dp[w][b+2]=res;
     }
 }
