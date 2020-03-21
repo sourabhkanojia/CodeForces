@@ -3,7 +3,7 @@ import java.util.*;
 import java.awt.*;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {      //Goldbach's conjecture is used in this problem.
         Scanner sc=new Scanner(System.in);
         StringBuilder sb=new StringBuilder();
         int n=sc.nextInt();
