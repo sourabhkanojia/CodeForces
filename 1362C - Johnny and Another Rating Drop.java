@@ -18,6 +18,9 @@ public class goku {
         return sol(n/2)+n;
     }
 }
+/******************************************
+              SOLUTION END
+ ******************************************/
 class InputReader {
     private InputStream stream;
     private byte[] buf = new byte[1024];
