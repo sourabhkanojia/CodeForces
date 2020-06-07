@@ -3,6 +3,7 @@ import java.io.*;
 import java.awt.*;
 
 public class Main {
+    static String str[]={"Ashish","Vivek"};
     public static void main(String[] args) throws Exception {
         InputReader sc = new InputReader(System.in);
         StringBuilder sb=new StringBuilder();
